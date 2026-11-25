@@ -1,21 +1,22 @@
-#ifndef __Hbridge__
-#define __Hbridge__
-#include <stdint.h>
+#ifndef _Hbridge_
+#define _Hbridge_
+
+#include "SimplePWMA.h"
 #include <math.h>
-#include "SimplePWM.h"
 
 class Hbridge
 {
-    public:
-        Hbridge();
-        void setup(uint8_t in[2], uint8_t ch[2], TimerConfig *config, float thereshold = 15.0f);
-        void setDuty(float duty);
-        private:
-
-        SimplePWM _in[2];
-        float _m, _b;
-        TimerConfig *TimerconfigHbridge;
+public:
+    Hbridge();
+    void setup(uint8_t in[2], uint8_t ch[2], ledc_timer_config_t *config, float threshold = 0.0f);
+    void setDuty(float duty);
+    void setStop();
+    // threshold es el duty cycle a partir del cual el motor se empieza a mover
+private:
+    SimplePWMA _in[2];
+    float _m, _b;
 };
 
+#endif //_Hbridge_H_
 
-#endif
+//click derecho- format doc

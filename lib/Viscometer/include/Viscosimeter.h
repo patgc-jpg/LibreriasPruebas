@@ -5,7 +5,7 @@
 #include "Control.h"
 #include "Encoder.h"
 #include "SimpleGPIO.h"
-#include "SimplePWM.h"
+#include "SimplePWMA.h"
 class viscosimeter{
     public:
     viscosimeter();
@@ -56,7 +56,7 @@ class viscosimeter{
     Control _PI;
     Encoder _enc;
     SimpleGPIO _en, _lpwm;
-    SimplePWM _PWM;
+    SimplePWMA _PWM;
 };
 
 

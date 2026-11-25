@@ -4,8 +4,6 @@
 #include <esp_task_wdt.h>
 #pragma once
 
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
 #include <string.h>
 #include "Encoder.h"
 #include "SimplePWM.h"
@@ -18,8 +16,8 @@
 #define EncoderB GPIO_NUM_18
 #define sampletime 20000
 #define Enable GPIO_NUM_13
-#define RPWM GPIO_NUM_27
-#define LPWM GPIO_NUM_26
+#define RPWM GPIO_NUM_17
+#define LPWM GPIO_NUM_4
 #define Kp 0.2328f
 #define Ki 2.6607f
 #define T1m 10000000.0f

@@ -1,7 +1,7 @@
 #include "Viscosimeter.h"
 #include "Control.h"
 #include "Encoder.h"
-#include "SimplePWM.h"
+#include "SimplePWMA.h"
 #include "SimpleGPIO.h"
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>

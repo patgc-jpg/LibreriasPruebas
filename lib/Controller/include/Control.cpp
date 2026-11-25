@@ -26,9 +26,6 @@ bool Control::setGains(float Kp, float Ki, float Kd, float N){
 }
 
 bool Control::setRef(float refRPM){
-    if(refRPM < 0){
-        return false;
-    }
     _refRPM = refRPM;
     return true;
 }
